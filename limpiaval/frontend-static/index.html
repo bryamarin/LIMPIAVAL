@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpiaval - Servicios de Limpieza Profesional</title>
+    <meta name="description" content="Servicios de limpieza rápidos, confiables y a buen precio para tu hogar y oficina.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Script (deferido para mejor performance) -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- ================== Cabecera y Navegación ================== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__logo-icon"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path></svg>
+                <span>Limpiaval</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#pricing" class="nav__link">Pricing</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__cta-mobile">
+                    <a href="#contact" class="button button--primary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <a href="#contact" class="button button--primary button--desktop">Contact Us</a>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================== Sección Hero ================== -->
+        <section id="home" class="hero section">
+            <div class="hero__container container grid">
+                <div class="hero__content">
+                    <h1 class="hero__title">Siente el camino hacia la frescura</h1>
+                    <p class="hero__subtitle">Experimenta la excelencia de la limpieza: rápido, confiable y a buen precio.</p>
+                    <div class="hero__buttons">
+                        <a href="#services" class="button button--primary">Our Services</a>
+                        <a href="#contact" class="button button--ghost">Get a Quote</a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <p class="stat__number">800+</p>
+                            <p class="stat__label">Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat__number">180+</p>
+                            <p class="stat__label">Branch/Service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__image-container">
+                    <img src="https://placehold.co/500x500/EBF4FF/2F6CE5?text=Limpieza\nProfesional" alt="Cubo con productos de limpieza y burbujas" class="hero__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Sección de Características ================== -->
+        <section class="features section">
+            <div class="features__container container grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Expert Team</h3>
+                    <p class="feature-card__text">Nuestro equipo está capacitado para ofrecer resultados impecables.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L1 21h22L12 2zm-1 14v-2h2v2h-2zm0-4V7h2v5h-2z"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Quality Service</h3>
+                    <p class="feature-card__text">Utilizamos productos y técnicas de la más alta calidad.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15c0-1.09 1.01-1.85 2.7-1.85c1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61c0 2.31 1.91 3.46 4.7 4.13c2.5.6 3 1.48 3 2.41c0 .69-.49 1.79-2.7 1.79c-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c2.11-.46 3.5-1.78 3.5-3.67c0-3.22-2.5-4.16-4.7-4.78z"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Affordable Price</h3>
+                    <p class="feature-card__text">Planes flexibles que se adaptan a tu presupuesto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Sección Sobre Nosotros ================== -->
+        <section id="about" class="about section">
+            <div class="about__container container grid">
+                <div class="about__content animate-on-scroll">
+                    <h2 class="section__title">Quiénes Somos</h2>
+                    <p class="section__subtitle">Con más de una década de experiencia, Limpiaval se ha consolidado como líder en soluciones de limpieza. Nuestra misión es crear ambientes frescos y saludables para nuestros clientes.</p>
+                    <div class="about__metrics">
+                        <div class="metric-chip">1000+ Proyectos Completados</div>
+                        <div class="metric-chip">123+ Expertos Limpiadores</div>
+                        <div class="metric-chip">400+ Clientes Recurrentes</div>
+                    </div>
+                </div>
+                <div class="about__image-container animate-on-scroll">
+                    <img src="https://placehold.co/500x550/5AB8FF/FFFFFF?text=Equipo\nLimpiaval" alt="Equipo de limpieza trabajando en una oficina moderna." class="about__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Sección Por Qué Elegirnos ================== -->
+        <section class="why-choose-us section">
+            <div class="why-choose-us__container container grid">
+                <div class="why-choose-us__image-container animate-on-scroll">
+                    <img src="https://placehold.co/500x550/FFA54C/FFFFFF?text=Calidad\nGarantizada" alt="Persona limpiando una ventana con una sonrisa." class="why-choose-us__image">
+                    <div class="badge">16+ Años de Experiencia</div>
+                </div>
+                <div class="why-choose-us__content animate-on-scroll">
+                    <h2 class="section__title">¿Por Qué Elegirnos?</h2>
+                    <p class="section__subtitle">Nuestro compromiso es tu satisfacción total.</p>
+                    <ul class="checklist">
+                        <li><span class="checklist__icon">✓</span> Personal de confianza y verificado.</li>
+                        <li><span class="checklist__icon">✓</span> Productos ecológicos y seguros.</li>
+                        <li><span class="checklist__icon">✓</span> Horarios flexibles adaptados a ti.</li>
+                        <li><span class="checklist__icon">✓</span> Garantía de satisfacción 100%.</li>
+                        <li><span class="checklist__icon">✓</span> Precios transparentes sin sorpresas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Sección de Precios ================== -->
+        <section id="pricing" class="pricing section">
+            <div class="container">
+                <h2 class="section__title text-center">Elige tu Plan Perfecto</h2>
+                <p class="section__subtitle text-center">Soluciones para cada necesidad y presupuesto.</p>
+
+                <div class="pricing__container grid">
+                    <div class="pricing-card animate-on-scroll">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Basic</h3>
+                            <p class="pricing-card__price"><span>$30</span> / mensual</p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li>✓ Limpieza de 1 habitación</li>
+                            <li>✓ Limpieza de 1 baño</li>
+                            <li>✓ Aspirado general</li>
+                            <li>✓ Limpieza de polvo</li>
+                            <li>- Limpieza de cocina</li>
+                            <li>- Limpieza de ventanas</li>
+                        </ul>
+                        <a href="#" class="button button--outline">Buy Plan</a>
+                    </div>
+                    <div class="pricing-card pricing-card--featured animate-on-scroll">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Standard</h3>
+                            <p class="pricing-card__price"><span>$70</span> / mensual</p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li>✓ Limpieza de hasta 3 habitaciones</li>
+                            <li>✓ Limpieza de 2 baños</li>
+                            <li>✓ Aspirado y trapeado</li>
+                            <li>✓ Limpieza de polvo y superficies</li>
+                            <li>✓ Limpieza de cocina básica</li>
+                            <li>- Limpieza de ventanas</li>
+                        </ul>
+                        <a href="#" class="button button--primary">Buy Plan</a>
+                    </div>
+                    <div class="pricing-card animate-on-scroll">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Premium</h3>
+                            <p class="pricing-card__price"><span>$120</span> / mensual</p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li>✓ Limpieza completa del hogar</li>
+                            <li>✓ Limpieza de hasta 3 baños</li>
+                            <li>✓ Aspirado y trapeado profundo</li>
+                            <li>✓ Limpieza de todas las superficies</li>
+                            <li>✓ Limpieza profunda de cocina</li>
+                            <li>✓ Limpieza de ventanas (interior)</li>
+                        </ul>
+                        <a href="#" class="button button--outline">Buy Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Sección de Galería ================== -->
+        <section id="gallery" class="gallery section">
+            <div class="container">
+                <h2 class="section__title text-center">Nuestros Resultados</h2>
+                <p class="section__subtitle text-center">Una imagen vale más que mil palabras.</p>
+
+                <div class="gallery__container grid animate-on-scroll">
+                    <div class="gallery__item"><img src="https://picsum.photos/400/300?random=1" alt="Cocina reluciente después de la limpieza" loading="lazy"></div>
+                    <div class="gallery__item"><img src="https://picsum.photos/400/300?random=2" alt="Baño impecable" loading="lazy"></div>
+                    <div class="gallery__item"><img src="https://picsum.photos/400/300?random=3" alt="Oficina ordenada y limpia" loading="lazy"></div>
+                    <div class="gallery__item"><img src="https://picsum.photos/400/300?random=4" alt="Suelo de madera brillante" loading="lazy"></div>
+                    <div class="gallery__item"><img src="https://picsum.photos/400/300?random=5" alt="Ventanas transparentes" loading="lazy"></div>
+                    <div class="gallery__item"><img src="https://picsum.photos/400/300?random=6" alt="Sala de estar acogedora y limpia" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Sección de Servicios ================== -->
+        <section id="services" class="services section">
+             <div class="container">
+                <h2 class="section__title text-center">Nuestros Servicios</h2>
+                <p class="section__subtitle text-center">Soluciones de limpieza para cada rincón.</p>
+                <div class="services__container grid">
+                    <div class="service-card animate-on-scroll">
+                        <img src="https://picsum.photos/400/250?random=7" alt="Limpieza de Hogar" class="service-card__image" loading="lazy">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Home Cleaning</h3>
+                            <div class="service-card__rating">⭐ 4.9</div>
+                        </div>
+                    </div>
+                     <div class="service-card animate-on-scroll">
+                        <img src="https://picsum.photos/400/250?random=8" alt="Limpieza de Cocina" class="service-card__image" loading="lazy">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Kitchen Cleaning</h3>
+                            <div class="service-card__rating">⭐ 4.8</div>
+                        </div>
+                    </div>
+                     <div class="service-card animate-on-scroll">
+                        <img src="https://picsum.photos/400/250?random=9" alt="Limpieza de Oficina" class="service-card__image" loading="lazy">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Office Cleaning</h3>
+                            <div class="service-card__rating">⭐ 5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Banda de Llamada a la Acción (CTA) ================== -->
+        <section id="contact" class="cta-band section">
+            <div class="cta-band__container container">
+                <div class="cta-band__content">
+                    <h2 class="cta-band__title">Llama para una Cotización Gratuita</h2>
+                    <p class="cta-band__phone">(+34) 123 456 789</p>
+                </div>
+                <a href="tel:+34123456789" class="button button--light">Llamar Ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================== Pie de Página ================== -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__section">
+                <a href="#" class="footer__logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path></svg>
+                    <span>Limpiaval</span>
+                </a>
+                <p class="footer__description">Creando espacios más limpios y saludables para ti y tu familia.</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21c-.36.1-.74.15-1.14.15c-.28 0-.55-.03-.81-.08c.55 1.7 2.14 2.93 4.03 2.96c-1.47 1.15-3.32 1.83-5.33 1.83c-.35 0-.69-.02-1.03-.06C2.64 19.35 4.76 20 7.03 20c7.23 0 11.19-6.03 11.19-11.19c0-.17 0-.34-.01-.51c.77-.56 1.44-1.26 1.97-2.03z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__section">
+                <h4 class="footer__title">Servicios</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Home Cleaning</a></li>
+                    <li><a href="#">Office Cleaning</a></li>
+                    <li><a href="#">Kitchen Cleaning</a></li>
+                    <li><a href="#">Window Cleaning</a></li>
+                </ul>
+            </div>
+             <div class="footer__section">
+                <h4 class="footer__title">Contacto</h4>
+                <ul class="footer__links">
+                    <li><span>Email:</span> contacto@limpiaval.com</li>
+                    <li><span>Tel:</span> (+34) 123 456 789</li>
+                    <li><span>Horario:</span> Lun-Vie: 9am - 6pm</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h4 class="footer__title">Newsletter</h4>
+                <p>Recibe ofertas y consejos de limpieza.</p>
+                <form class="footer__newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit" aria-label="Suscribirse">➔</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Limpiaval. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

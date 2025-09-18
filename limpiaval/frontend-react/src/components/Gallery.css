@@ -1,0 +1,73 @@
+.gallery-container {
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    cursor: grab;
+}
+
+.gallery-container:active {
+    cursor: grabbing;
+}
+
+.gallery-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.gallery-item {
+    position: absolute;
+    height: 90%;
+    border-radius: 1rem; /* 16px */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) !important;
+    opacity: 1 !important;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Evita que la imagen interfiera con el arrastre */
+}
+
+/* Gradientes para difuminar los bordes */
+.gallery-gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.gallery-gradient-left {
+    left: 0;
+    background: linear-gradient(to right, #F5F9FF, transparent);
+}
+
+.gallery-gradient-right {
+    right: 0;
+    background: linear-gradient(to left, #F5F9FF, transparent);
+}
