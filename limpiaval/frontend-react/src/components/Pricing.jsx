@@ -19,7 +19,7 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-20 md:py-28 bg-bg">
+    <section id="pricing" className="py-20 md:py-28 bg-gradient-to-b from-sky to-primaryg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
@@ -30,7 +30,7 @@ const Pricing = () => {
             presupuesto y necesidades de limpieza.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:px-24">
           {plans.map((plan, index) => {
             const featuresList =
               typeof plan.features === "string"

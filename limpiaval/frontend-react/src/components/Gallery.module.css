@@ -1,0 +1,88 @@
+/* 1. Definimos la animación de scroll.
+  Moverá el contenido horizontalmente desde su posición inicial (0)
+  hasta la mitad de su longitud total (-50%). Como hemos duplicado las imágenes,
+  moverlo un 50% significa que el primer grupo de imágenes ha salido
+  completamente de la pantalla. Al reiniciar la animación, la transición es invisible.
+*/
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 2. El contenedor principal que será la "ventana" visible.
+  `overflow: hidden` es crucial para ocultar las imágenes que están fuera de la vista.
+  `position: relative` es necesario para los gradientes de los bordes.
+*/
+.galleryContainer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+/* Gradientes en los bordes para un efecto de difuminado suave */
+.galleryContainer::before,
+.galleryContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.galleryContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color, #F5F9FF) 20%, transparent);
+}
+
+.galleryContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color, #F5F9FF) 20%, transparent);
+}
+
+/* 3. El carrusel de imágenes.
+  Usamos flexbox y aplicamos la animación 'scroll'.
+  `animation-play-state: paused` al hacer hover sobre el contenedor principal.
+*/
+.track {
+  display: flex;
+  gap: 2vw; /* Espacio entre imágenes */
+  /* El ancho se calcula para contener todas las imágenes duplicadas */
+  width: calc(250px * 24); /* (ancho de imagen + gap) * número total de imágenes */
+  animation: scroll 80s linear infinite;
+}
+
+.galleryContainer:hover .track {
+  animation-play-state: paused;
+}
+
+/* 4. Contenedor de cada imagen.
+  Define el tamaño fijo de cada elemento.
+*/
+.imageContainer {
+  height: 400px;
+  width: 250px;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 5. La imagen en sí. */
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover img {
+    transform: scale(1.05);
+}
+

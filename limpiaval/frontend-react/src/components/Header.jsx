@@ -56,11 +56,11 @@ export default function Header() {
 
             {/* --- NUEVA ESTRUCTURA DEL CONTENIDO --- */}
             <div className="relative z-10 w-full h-full flex items-center">
-                <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+                <div className="w-full  mx-auto flex flex-col lg:flex-row items-center justify-between">
 
                     {/* Columna Izquierda: Texto y CTAs */}
                     <motion.div 
-                        className="lg:w-1/2 text-center lg:text-left"
+                        className="lg:w-1/2 text-center lg:text-left px-4 sm:px-6 lg:px-24"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
@@ -102,7 +102,7 @@ export default function Header() {
                     >
                         {/* INSTRUCCIÓN: Coloca tu imagen en public/assets/ */}
                         <img 
-                            src="/assets/imagenes/bote-mesa.png" 
+                            src="/assets/imagenes/mesabote.png" 
                             alt="Cubo con utensilios de limpieza" 
                             className="h-auto max-h-[90vh] w-auto"
                         />

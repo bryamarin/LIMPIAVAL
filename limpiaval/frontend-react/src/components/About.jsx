@@ -20,7 +20,7 @@ const About = () => {
     const metrics = ["1000+ Proyectos Completados", "123+ Expertos Limpiadores", "400+ Clientes Recurrentes"];
 
     return (
-        <section id="about" className="py-20 bg-white">
+        <section id="about" className="py-20">
             <motion.div 
                 className="container mx-auto px-6"
                 initial="offscreen"
@@ -28,7 +28,7 @@ const About = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={containerVariants}
             >
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-12 items-center lg:px-24">
                     <motion.div variants={itemVariants}>
                         <h2 className="text-3xl font-bold text-text mb-4">Quiénes Somos</h2>
                         <p className="text-text-muted mb-6">

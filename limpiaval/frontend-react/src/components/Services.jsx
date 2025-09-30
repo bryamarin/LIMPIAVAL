@@ -25,7 +25,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-white">
+    <section id="services" className="py-20 md:py-28 bg-gradient-to-b from-sky to-primaryg">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
           Nuestros Servicios de Limpieza

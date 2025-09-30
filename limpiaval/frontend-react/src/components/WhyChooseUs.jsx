@@ -10,9 +10,9 @@ const checklistItems = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="why-choose-us" className="py-20 bg-gradient-to-b from-sky to-primary">
+        <section id="why-choose-us" className="py-20">
             <div className="container mx-auto px-6">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-12 items-center lg:px-24">
                     <motion.div 
                         className="relative"
                         initial={{ opacity: 0, x: -50 }}
@@ -37,12 +37,12 @@ const WhyChooseUs = () => {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl font-bold text-white mb-4">¿Por Qué Elegirnos?</h2>
-                        <p className="text-white mb-6">Nuestro compromiso es tu satisfacción total. Ofrecemos un servicio que va más allá de la limpieza.</p>
+                        <h2 className="text-3xl font-bold text-black mb-4">¿Por Qué Elegirnos?</h2>
+                        <p className="text-black mb-6">Nuestro compromiso es tu satisfacción total. Ofrecemos un servicio que va más allá de la limpieza.</p>
                         <ul className="space-y-4">
                             {checklistItems.map((item, index) => (
-                                <li key={index} className="flex items-start text-white">
-                                    <span className="bg-sky/20 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold mr-3 mt-1 flex-shrink-0">✓</span>
+                                <li key={index} className="flex items-start text-black">
+                                    <span className="bg-sky/20 text-black rounded-full w-6 h-6 flex items-center justify-center font-bold mr-3 mt-1 flex-shrink-0">✓</span>
                                     <span>{item}</span>
                                 </li>
                             ))}
