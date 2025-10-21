@@ -1,12 +1,13 @@
 export const plans = [
     {
         id: 1,
-        name: 'Basic',
-        price: 30,
+        name: 'Pack Hogar',
+        price: 104,
         featured: false,
         features: [
-            { text: 'Limpieza de 1 habitación', included: true },
-            { text: 'Limpieza de 1 baño', included: true },
+            { text: '4 sesiones de 2h al mes', included: true },
+            { text: 'Limpieza de habitaciónes', included: true },
+            { text: 'Limpieza de baño', included: true },
             { text: 'Aspirado general', included: true },
             { text: 'Limpieza de polvo', included: true },
             { text: 'Limpieza de cocina', included: false },
@@ -15,29 +16,30 @@ export const plans = [
     },
     {
         id: 2,
-        name: 'Standard',
-        price: 70,
+        name: 'Pack Airbnb',
+        price: 300,
         featured: true,
         features: [
-            { text: 'Limpieza de hasta 3 habitaciones', included: true },
-            { text: 'Limpieza de 2 baños', included: true },
-            { text: 'Aspirado y trapeado', included: true },
+            { text: '10 limpiezas'},
+            { text: 'Limpieza General', included: true },
+            { text: 'Cambio de sábanas', included: true },
+            { text: 'Toallas y amenities', included: true },
             { text: 'Limpieza de polvo y superficies', included: true },
-            { text: 'Limpieza de cocina básica', included: true },
-            { text: 'Limpieza de ventanas', included: false },
+            { text: 'Productos y aspirado profesional', included: true },
+            { text: 'Limpieza de ventanas y cristales', included: false },
         ]
     },
     {
         id: 3,
-        name: 'Premium',
-        price: 120,
+        name: 'Pack Oficina',
+        price: 96,
         featured: false,
         features: [
-            { text: 'Limpieza completa del hogar', included: true },
-            { text: 'Limpieza de hasta 3 baños', included: true },
-            { text: 'Aspirado y trapeado profundo', included: true },
+            { text: ' 4 sesiones', included: true },
+            { text: 'Limpieza de áreas comunes', included: true },
+            { text: 'Limpieza de baños', included: true },
+            { text: 'Aspirado y trapeado', included: true },
             { text: 'Limpieza de todas las superficies', included: true },
-            { text: 'Limpieza profunda de cocina', included: true },
             { text: 'Limpieza de ventanas (interior)', included: true },
         ]
     }

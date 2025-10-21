@@ -1,6 +1,6 @@
 import styles from './Gallery.module.css';
 
-// La misma lista de imágenes de antes
+// Asegúrate de que las rutas apunten a tus imágenes optimizadas
 const images = Array.from({ length: 12 }, (_, i) => `/assets/imagenes/gallery-${i + 1}.jpg`);
 
 const Gallery = () => {
@@ -12,20 +12,12 @@ const Gallery = () => {
                 Un vistazo a la calidad y el detalle que ponemos en cada trabajo.
             </p>
         </div>
-
-        {/* Este es el contenedor principal que actúa como la "ventana" visible.
-          Tendrá un gradiente en los bordes para un efecto de difuminado.
-        */}
         <div className={styles.galleryContainer}>
-            {/* El carrusel que contiene las imágenes. La animación se define en el CSS. */}
             <div className={styles.track}>
-                {/* Duplicamos la lista de imágenes para crear el bucle infinito.
-                  Cuando el primer grupo de imágenes sale de la pantalla, el segundo
-                  grupo (que es idéntico) ya está entrando, creando una transición perfecta.
-                */}
+                {/* Duplicamos las imágenes para el bucle infinito */}
                 {[...images, ...images].map((src, i) => (
                     <div key={i} className={styles.imageContainer}>
-                        <img src={src} alt={`Imagen de galería ${i + 1}`} />
+                        <img src={src} alt={`Trabajo de limpieza ${i + 1}`} loading="lazy" />
                     </div>
                 ))}
             </div>

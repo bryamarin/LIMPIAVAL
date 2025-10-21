@@ -1,0 +1,60 @@
+/* 1. Definimos la animación de scroll horizontal infinito */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Movemos el carrusel exactamente la mitad de su longitud total */
+    transform: translateX(-50%);
+  }
+}
+
+/* 2. Contenedor principal que actúa como ventana */
+.logosContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* La máscara de degradado crea un efecto de difuminado en los bordes */
+  -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+
+/* 3. El carrusel que contiene los logos */
+.logosTrack {
+  display: flex;
+  /* El ancho se calcula para contener todos los logos duplicados */
+  /* (Ancho del item) * (Número total de items) */
+  width: calc(200px * 14); 
+  animation: scroll 40s linear infinite;
+}
+
+/* Pausamos la animación al pasar el ratón por encima */
+.logosContainer:hover .logosTrack {
+  animation-play-state: paused;
+}
+
+/* 4. Estilos para cada logo individual */
+.logoItem {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.logoItem img {
+  max-width: 100%;
+  max-height: 50px;
+  /* Por defecto, los logos están en escala de grises y algo transparentes */
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* Al pasar el ratón, el logo recupera su color y se vuelve nítido */
+.logoItem:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}

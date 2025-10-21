@@ -1,0 +1,80 @@
+/* El fondo oscuro semitransparente */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(11, 27, 63, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* El contenedor del formulario */
+.modalContent {
+  position: relative;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+}
+
+/* El botón para cerrar el modal */
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #9ca3af; /* text-gray-400 */
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #1C2434; /* text-text */
+}
+
+/* Estilos para los campos del formulario */
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  margin-top: 0.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2F6CE5; /* primary */
+  box-shadow: 0 0 0 2px rgba(47, 108, 229, 0.2);
+}
+
+/* Estilos para el botón de envío */
+.submitButton {
+  width: 100%;
+  background-color: #2F6CE5; /* primary */
+  color: white;
+  font-weight: bold;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #2456B7; /* primary-600 */
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background-color: #9ca3af; /* gray-400 */
+  cursor: not-allowed;
+}

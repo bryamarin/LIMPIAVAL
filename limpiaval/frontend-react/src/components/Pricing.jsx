@@ -19,13 +19,13 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-20 md:py-28 bg-gradient-to-b from-sky to-primaryg">
+    <section id="pricing" className="py-20 bg-gradient-to-b from-sky to-primaryg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Elige el Plan Perfecto para Ti
           </h2>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Planes flexibles y asequibles diseñados para adaptarse a tu
             presupuesto y necesidades de limpieza.
           </p>

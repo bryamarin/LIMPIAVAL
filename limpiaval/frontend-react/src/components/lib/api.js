@@ -1,43 +1,29 @@
-const API_URL = 'http://localhost:3000/api'; // La URL de tu futuro backend
-
-const handleResponse = async (response) => {
-    if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Something went wrong');
-    }
-    return response.json();
-};
+const API_URL = "http://localhost:3000/api";
 
 export const getPlans = async () => {
-    const response = await fetch(`${API_URL}/plans`);
-    return handleResponse(response);
+  const response = await fetch(`${API_URL}/plans`);
+  if (!response.ok) throw new Error("Failed to fetch plans");
+  return response.json();
 };
 
 export const getServices = async () => {
-    const response = await fetch(`${API_URL}/services`);
-    return handleResponse(response);
+  const response = await fetch(`${API_URL}/services`);
+  if (!response.ok) throw new Error("Failed to fetch services");
+  return response.json();
 };
 
-// ... aquí irían las demás funciones para gallery, testimonials, etc.
-
-export const submitContactForm = async (data) => {
-    const response = await fetch(`${API_URL}/contact`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    });
-    return handleResponse(response);
+// --- FUNCIÓN NUEVA AÑADIDA AQUÍ ---
+export const submitQuote = async (data) => {
+  const response = await fetch(`${API_URL}/quote`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
 };
 
-export const submitQuoteForm = async (data) => {
-    const response = await fetch(`${API_URL}/quote`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    });
-    return handleResponse(response);
-};

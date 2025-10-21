@@ -17,7 +17,7 @@ const itemVariants = {
 
 
 const About = () => {
-    const metrics = ["1000+ Proyectos Completados", "123+ Expertos Limpiadores", "400+ Clientes Recurrentes"];
+    const metrics = ["580+ Proyectos Completados", "100+ Expertos Limpiadores", "400+ Clientes Recurrentes"];
 
     return (
         <section id="about" className="py-20">
@@ -32,9 +32,9 @@ const About = () => {
                     <motion.div variants={itemVariants}>
                         <h2 className="text-3xl font-bold text-text mb-4">Quiénes Somos</h2>
                         <p className="text-text-muted mb-6">
-                            Con más de una década de experiencia, Limpiaval se ha consolidado como líder en soluciones de limpieza. Nuestra misión es crear ambientes frescos y saludables para nuestros clientes, con un servicio confiable y de máxima calidad.
+                            Somos limpieza profesional con rostro humano: puntualidad, confianza y resultados impecables. En tu casa, en tu Airbnb, o después de una reforma. Nuestra misión es crear ambientes frescos y saludables para nuestros clientes, con un servicio confiable y de máxima calidad.
                         </p>
-                        <div className="flex flex-wrap gap-3">
+                        <div className="flex text-align: center gap-4">
                             {metrics.map((metric, index) => (
                                 <motion.div 
                                     key={index}

@@ -27,10 +27,10 @@ const Services = () => {
   return (
     <section id="services" className="py-20 md:py-28 bg-gradient-to-b from-sky to-primaryg">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Nuestros Servicios de Limpieza
         </h2>
-        <p className="text-lg text-text-muted max-w-2xl mx-auto mb-12">
+        <p className="text-white max-w-2xl mx-auto mb-12">
           Ofrecemos una amplia gama de servicios para satisfacer todas tus
           necesidades de limpieza, siempre con la máxima calidad.
         </p>
@@ -38,7 +38,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              className="bg-bg p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow duration-300 text-left hover:-translate-y-1"
+              className="bg-bg rounded-2xl shadow-soft hover:shadow-lg transition-shadow duration-300 text-left hover:-translate-y-1"
               custom={index}
               initial="hidden"
               whileInView="visible"
@@ -48,10 +48,10 @@ const Services = () => {
               <img
                 src={service.imageUrl}
                 alt={service.name}
-                className="w-full h-48 object-cover rounded-lg mb-6"
+                className="w-full h-60 object-cover rounded-2xl mb-6"
                 loading="lazy"
               />
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center px-8 mb-2">
                 <h3 className="text-xl font-bold text-text">{service.name}</h3>
                 <div className="flex items-center bg-accent/20 text-accent-dark font-bold text-sm px-3 py-1 rounded-full">
                   <svg

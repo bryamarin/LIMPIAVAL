@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
                             viewport={{ once: true, amount: 0.5 }}
                             transition={{ duration: 0.5, delay: 0.5, type: 'spring' }}
                         >
-                            16+ Años de Experiencia
+                            4+ Años de Experiencia
                         </motion.div>
                     </motion.div>
                     <motion.div
