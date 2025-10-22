@@ -15,7 +15,7 @@ import QuoteForm from './components/QuoteForm';
 function App() {
   // Volvemos a añadir el estado para controlar el modal
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  
+
   // Como el modal se abre desde un lugar genérico,
   // el nombre del servicio será genérico también.
   const genericServiceName = "Cotización General";
@@ -40,20 +40,33 @@ function App() {
             <Clients />
           </div>
         </section>*/}
-        
-        <section id="about" className="py-5 lg:py-5">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <section
+          id="about"
+          className="py-20 lg:py-28 bg-white"
+          style={{
+            backgroundImage: "url('assets/imagenes/background.png')",
+            backgroundRepeat: 'repeat'
+          }}
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:py-8">
             <About />
           </div>
         </section>
 
         <section id="services">
-            <Services />
+          <Services />
         </section>
 
         {/* La sección WhyChooseUs también tiene su propio fondo, solo necesita el id */}
         <section id="why-choose-us" className="py-5 lg:py-5">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className="py-20 bg"
+            style={{
+              backgroundImage: "url('assets/imagenes/background.png')",
+              backgroundRepeat: 'repeat'
+            }}
+          >
             <WhyChooseUs />
           </div>
         </section>
@@ -65,21 +78,32 @@ function App() {
         </section>
 
         {/* Esta es la sección que arregla tu problema con el enlace a Galería */}
-        <section id="gallery" className="py-5 lg:py-5">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+          id="gallery"
+          className="py-20 lg:py-28 overflow-hidden bg"
+          style={{
+            backgroundImage: "url('assets/imagenes/background.png')",
+            backgroundRepeat: 'repeat'
+          }}
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:py-8">
             <Gallery />
           </div>
         </section>
 
-        
-        <section id="contact" className="py-20 lg:py-28">
+
+        <section id="contact" className="bg lg:py-18"
+          style={{
+              backgroundImage: "url('assets/imagenes/background.png')",
+              backgroundRepeat: 'repeat'
+            }}>
           <div className="container mx-auto px-4 sm:px-6 lg:py-8">
             <CTA onQuoteClick={handleOpenQuoteModal} />
           </div>
         </section>
       </main>
       <Footer />
-      <QuoteForm 
+      <QuoteForm
         isOpen={isQuoteModalOpen}
         onClose={handleCloseQuoteModal}
         serviceName={genericServiceName}
