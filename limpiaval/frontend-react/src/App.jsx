@@ -43,7 +43,7 @@ function App() {
 
         <section
           id="about"
-          className="py-20 lg:py-28 bg-white"
+          className="py-20"
           style={{
             backgroundImage: "url('assets/imagenes/background.png')",
             backgroundRepeat: 'repeat'

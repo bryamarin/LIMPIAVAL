@@ -1,7 +1,7 @@
 import styles from './Gallery.module.css';
 
 // Asegúrate de que las rutas apunten a tus imágenes optimizadas
-const images = Array.from({ length: 12 }, (_, i) => `/assets/imagenes/gallery-${i + 1}.jpg`);
+const images = Array.from({ length: 6 }, (_, i) => `/assets/imagenes/gallery-${i + 1}.jpg`);
 
 const Gallery = () => {
   return (

@@ -10,7 +10,7 @@ const checklistItems = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="why-choose-us" className="py-20">
+        <section id="why-choose-us" className="padding-bottom: 5rem">
             <div className="container mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center lg:px-24">
                     <motion.div 
@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img src="https://placehold.co/500x550/FFA54C/FFFFFF?text=Calidad\nGarantizada" alt="Persona limpiando una ventana con una sonrisa" className="rounded-2xl shadow-lg w-full h-full object-cover"/>
+                        <img src="/assets/imagenes/house LVAL.png" alt="Persona limpiando una ventana con una sonrisa" className="rounded-2xl shadow-lg w-full h-full object-cover"/>
                         <motion.div 
                             className="absolute bottom-8 -left-6 bg-white text-black text-lg font-bold px-6 py-4 rounded-lg shadow-xl"
                             initial={{ scale: 0 }}

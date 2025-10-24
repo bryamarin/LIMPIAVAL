@@ -20,7 +20,7 @@ const About = () => {
     const metrics = ["580+ Proyectos Completados", "100+ Expertos Limpiadores", "400+ Clientes Recurrentes"];
 
     return (
-        <section id="about" className="py-20">
+        <section id="about">
             <motion.div 
                 className="container mx-auto px-6"
                 initial="offscreen"

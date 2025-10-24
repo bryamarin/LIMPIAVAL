@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Esencial para que la imagen no se desborde */
-    background-color: #F5F9FF; /* Color de fondo mientras carga la imagen */
+    background-color: #fbfbfbff; /* Color de fondo mientras carga la imagen */
 }
 
 #hero-image {
@@ -27,7 +27,7 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 1);
     padding: 2rem;
     border-radius: 1.5rem;
     /* Efecto de "vidrio esmerilado" para mejorar legibilidad */

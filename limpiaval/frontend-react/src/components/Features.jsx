@@ -87,7 +87,7 @@ const Features = () => {
   return (
     // ESTA ES LA ÚNICA LÍNEA MODIFICADA
     <section className="relative z-50 -mt-32 bg-transparent px-4 py-16">
-      <div className="container mx-auto lg:px-24">
+      <div className=" mx-auto lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featureData.map((feature, index) => (
             <motion.div
