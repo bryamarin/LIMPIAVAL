@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = "/api";
 
 export const getPlans = async () => {
   const response = await fetch(`${API_URL}/plans`);
@@ -12,7 +12,6 @@ export const getServices = async () => {
   return response.json();
 };
 
-// --- FUNCIÓN NUEVA AÑADIDA AQUÍ ---
 export const submitQuote = async (data) => {
   const response = await fetch(`${API_URL}/quote`, {
     method: 'POST',
@@ -26,4 +25,3 @@ export const submitQuote = async (data) => {
   }
   return response.json();
 };
-
