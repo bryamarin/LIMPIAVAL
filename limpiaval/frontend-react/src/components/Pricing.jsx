@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { plans as mockPlans } from "./data/plans.js";
 
-const Pricing = () => {
+const Pricing = ({ onPlanSelect }) => {
   const plans = mockPlans; 
 
   const cardVariants = {
@@ -103,6 +103,7 @@ const Pricing = () => {
                   ))}
                 </ul>
                 <button
+                  onClick={() => onPlanSelect(plan.name)} 
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-300 ${
                     plan.featured
                       ? "bg-white text-primary hover:bg-sky hover:text-white"

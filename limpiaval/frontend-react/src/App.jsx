@@ -13,20 +13,22 @@ import Clients from './components/Clients';
 import QuoteForm from './components/QuoteForm';
 
 function App() {
-  // Volvemos a añadir el estado para controlar el modal
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  
+  // 1. CAMBIO: Creamos un estado para guardar el nombre del servicio seleccionado
+  // Por defecto será "Cotización General"
+  const [selectedService, setSelectedService] = useState("Cotización General");
 
-  // Como el modal se abre desde un lugar genérico,
-  // el nombre del servicio será genérico también.
-  const genericServiceName = "Cotización General";
-
-  const handleOpenQuoteModal = () => {
-    setIsQuoteModalOpen(true);
+  // 2. CAMBIO: Modificamos esta función para que acepte un nombre
+  const handleOpenQuoteModal = (serviceName = "Cotización General") => {
+    setSelectedService(serviceName); // Guardamos el nombre del plan clicado
+    setIsQuoteModalOpen(true);       // Abrimos el modal
   };
 
   const handleCloseQuoteModal = () => {
     setIsQuoteModalOpen(false);
   };
+
   return (
     <div className="bg-bg text-text-muted">
       <Navbar />
@@ -74,7 +76,8 @@ function App() {
 
         {/* La sección de Pricing ya tiene su propio fondo y padding, solo necesita el id */}
         <section id="pricing">
-          <Pricing />
+          {/* 3. CAMBIO: Pasamos la función al componente Pricing */}
+          <Pricing onPlanSelect={handleOpenQuoteModal} />
         </section>
 
         {/* Esta es la sección que arregla tu problema con el enlace a Galería */}
@@ -98,7 +101,7 @@ function App() {
               backgroundRepeat: 'repeat'
             }}>
           <div className="container mx-auto px-4 sm:px-6 lg:py-8">
-            <CTA onQuoteClick={handleOpenQuoteModal} />
+            <CTA onQuoteClick={() => handleOpenQuoteModal("Cotización General")} />
           </div>
         </section>
       </main>
@@ -106,7 +109,7 @@ function App() {
       <QuoteForm
         isOpen={isQuoteModalOpen}
         onClose={handleCloseQuoteModal}
-        serviceName={genericServiceName}
+        serviceName={selectedService}
       />
     </div>
   );
