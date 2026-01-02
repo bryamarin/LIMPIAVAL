@@ -63,7 +63,7 @@ const Pricing = ({ onPlanSelect }) => {
                     plan.featured ? "text-sky" : "text-primary"
                   }`}
                 >
-                  ${plan.price}
+                  €{plan.price} 
                   <span
                     className={`text-lg font-medium ${
                       plan.featured ? "text-gray-200" : "text-text-muted"
