@@ -11,14 +11,14 @@ const servicesData = [
     id: 2,
     name: "Limpieza de Oficinas",
     description: "Un ambiente de trabajo limpio mejora la productividad. Nos encargamos de escritorios, suelos y zonas comunes.",
-    imageUrl: "/assets/imagenes/OFICINA..png",
+    imageUrl: "/assets/imagenes/oficina.png",
     rating: 4.9
   },
   {
     id: 3,
     name: "Limpieza de Cocinas",
     description: "Eliminamos grasa y suciedad acumulada. Dejamos tu cocina brillante y desinfectada.",
-    imageUrl: "/assets/imagenes/cocina LVAL.png",
+    imageUrl: "/assets/imagenes/cocinalval.png",
     rating: 4.8
   },
   {
@@ -32,14 +32,14 @@ const servicesData = [
     id: 5,
     name: "Cristales y fachadas",
     description: "Revitaliza tus cristales y elimina manchas difíciles con nuestro tratamiento especializado.",
-    imageUrl: "/assets/imagenes/baño LVAL.png",
+    imageUrl: "/assets/imagenes/bañolval.png",
     rating: 4.9
   },
   {
     id: 6,
     name: "Post-Construction",
     description: "Servicio especializado de limpieza para eliminar suciedad después de obras.",
-    imageUrl: "/assets/imagenes/potsobra LVAL.png",
+    imageUrl: "/assets/imagenes/potsobralval.png",
     rating: 5.0
   }
 ];

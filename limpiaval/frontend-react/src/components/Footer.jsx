@@ -10,7 +10,12 @@ const Footer = () => {
                     {/* Col 1: Logo & Desc */}
                     <div>
                         <a href="#home" className="flex items-center gap-2 text-xl font-bold text-white mb-4">
-                            <DropIcon />
+                            {/* ✅ CORRECCIÓN: Reemplazamos el icono SVG por tu logo con la ruta absoluta */}
+                            <img 
+                                src="/assets/imagenes/logo.png" 
+                                alt="Limpiaval" 
+                                className="h-8 w-auto" 
+                            />
                             <span>Limpiaval</span>
                         </a>
                         <p className="mb-4">Creando espacios más limpios y saludables para ti y tu familia.</p>

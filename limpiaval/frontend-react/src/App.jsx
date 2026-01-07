@@ -47,7 +47,7 @@ function App() {
           id="about"
           className="py-20"
           style={{
-            backgroundImage: "url('assets/imagenes/background.png')",
+            backgroundImage: "url('/assets/imagenes/background.png')",
             backgroundRepeat: 'repeat'
           }}
         >
@@ -65,7 +65,7 @@ function App() {
           <div
             className="py-20 bg"
             style={{
-              backgroundImage: "url('assets/imagenes/background.png')",
+              backgroundImage: "url('/assets/imagenes/background.png')",
               backgroundRepeat: 'repeat'
             }}
           >
@@ -85,7 +85,7 @@ function App() {
           id="gallery"
           className="py-20 lg:py-28 overflow-hidden bg"
           style={{
-            backgroundImage: "url('assets/imagenes/background.png')",
+            backgroundImage: "url('/assets/imagenes/background.png')",
             backgroundRepeat: 'repeat'
           }}
         >
@@ -97,7 +97,7 @@ function App() {
 
         <section id="contact" className="bg lg:py-18"
           style={{
-              backgroundImage: "url('assets/imagenes/background.png')",
+              backgroundImage: "url('/assets/imagenes/background.png')",
               backgroundRepeat: 'repeat'
             }}>
           <div className="container mx-auto px-4 sm:px-6 lg:py-8">

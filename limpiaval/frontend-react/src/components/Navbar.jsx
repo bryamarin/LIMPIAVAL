@@ -38,13 +38,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center lg:px-24">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2">
-          <img src="/assets/logos/logolimpiaval.png" alt="Limpiaval Logo" className="h-10 w-auto" />
-          {/* --- MODIFICACIÓN DE COLOR AQUÍ --- */}
-          <span className={`text-2xl font-bold transition-colors ${
-              isScrolled ? 'text-text' : 'text-white'
-            }`}
-          >
-            Limpiaval
+          <img 
+            src="/assets/imagenes/logo.png" 
+            alt="LimpiaVal Logo" 
+            className="h-10 w-auto" 
+          />
+          <span className={`text-xl font-bold ${isScrolled ? 'text-primary' : 'text-primary'}`}>
+            LimpiaVal
           </span>
         </a>
 

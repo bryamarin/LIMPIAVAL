@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { plans as mockPlans } from "./data/plans.js";
+import { getPlans } from "./lib/api.js";
 
 const Pricing = ({ onPlanSelect }) => {
-  const plans = mockPlans; 
+  const [plans, setPlans] = useState([]);
+
+  useEffect(() => {
+    // Obtenemos los planes desde la API local
+    getPlans().then(data => setPlans(data));
+  }, []);
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -32,10 +37,8 @@ const Pricing = ({ onPlanSelect }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:px-24">
           {plans.map((plan, index) => {
-            const featuresList =
-              typeof plan.features === "string"
-                ? JSON.parse(plan.features)
-                : plan.features;
+            // Aseguramos que features sea un array, por si acaso
+            const featuresList = Array.isArray(plan.features) ? plan.features : [];
 
             return (
               <motion.div
@@ -63,7 +66,7 @@ const Pricing = ({ onPlanSelect }) => {
                     plan.featured ? "text-sky" : "text-primary"
                   }`}
                 >
-                  €{plan.price} 
+                  {plan.price} €
                   <span
                     className={`text-lg font-medium ${
                       plan.featured ? "text-gray-200" : "text-text-muted"
@@ -96,8 +99,7 @@ const Pricing = ({ onPlanSelect }) => {
                           plan.featured ? "text-gray-200" : "text-text-muted"
                         }
                       >
-                        {/* FIX: Accedemos a la propiedad .text del objeto */}
-                        {feature.text}
+                        {typeof feature === 'string' ? feature : feature.text}
                       </span>
                     </li>
                   ))}

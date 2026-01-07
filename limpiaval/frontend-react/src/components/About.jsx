@@ -47,7 +47,7 @@ const About = () => {
                         </div>
                     </motion.div>
                     <motion.div variants={itemVariants}>
-                         <img src="/assets/imagenes/team LVAL.png" alt="Equipo de limpieza trabajando" className="rounded-2xl shadow-lg w-full h-full object-cover" />
+                         <img src="/assets/imagenes/teamlval.png" alt="Equipo de limpieza trabajando" className="rounded-2xl shadow-lg w-full h-full object-cover" />
                     </motion.div>
                 </div>
             </motion.div>

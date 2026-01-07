@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img src="/assets/imagenes/house LVAL.png" alt="Persona limpiando una ventana con una sonrisa" className="rounded-2xl shadow-lg w-full h-full object-cover"/>
+                        <img src="/assets/imagenes/houselval.png" alt="Persona limpiando una ventana con una sonrisa" className="rounded-2xl shadow-lg w-full h-full object-cover"/>
                         <motion.div 
                             className="absolute bottom-8 -left-6 bg-white text-black text-lg font-bold px-6 py-4 rounded-lg shadow-xl"
                             initial={{ scale: 0 }}
