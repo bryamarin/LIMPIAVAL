@@ -7,19 +7,16 @@ const Footer = () => {
         <footer className="bg-footer-navy text-gray-300 pt-16">
             <div className="container mx-auto px-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Col 1: Logo & Desc */}
                     <div>
                         <a href="#home" className="flex items-center gap-2 text-xl font-bold text-white mb-4">
-                            {/* ✅ CORRECCIÓN: Reemplazamos el icono SVG por tu logo con la ruta absoluta */}
                             <img 
-                                src="/assets/imagenes/logo.png" 
+                                src="/assets/logos/logo.png" 
                                 alt="Limpiaval" 
                                 className="h-8 w-auto" 
                             />
                             <span>Limpiaval</span>
                         </a>
                         <p className="mb-4">Creando espacios más limpios y saludables para ti y tu familia.</p>
-                        {/* Social Icons could go here */}
                     </div>
 
                     {/* Col 2: Services */}

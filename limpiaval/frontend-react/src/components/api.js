@@ -1,5 +1,4 @@
-// --- DATOS FIJOS (Antes estaban en el servidor, ahora viven aquí) ---
-const servicesData = [
+export const servicesData = [
   {
     id: 1,
     name: "Tratamiento de suelos",
@@ -32,7 +31,7 @@ const servicesData = [
     id: 5,
     name: "Cristales y fachadas",
     description: "Revitaliza tus cristales y elimina manchas difíciles con nuestro tratamiento especializado.",
-    imageUrl: "/assets/imagenes/bañolval.png",
+    imageUrl: "/assets/imagenes/bano.png",
     rating: 4.9
   },
   {
@@ -44,7 +43,7 @@ const servicesData = [
   }
 ];
 
-const plansData = [
+export const plansData = [
     {
         id: 1,
         name: 'Pack Hogar',
@@ -91,9 +90,7 @@ const plansData = [
     }
 ];
 
-// --- FUNCIONES NUEVAS ---
 
-// Ya no piden datos al servidor, los devuelven directamente
 export const getPlans = async () => {
   return plansData;
 };
@@ -102,10 +99,8 @@ export const getServices = async () => {
   return servicesData;
 };
 
-// Esta función es la única que conecta con el exterior (PHP)
 export const submitQuote = async (data) => {
-  // Apuntamos a un archivo PHP que subiremos a One.com
-  const response = await fetch('send_quote.php', { 
+  const response = await fetch('/send_quote.php', { 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -114,7 +109,7 @@ export const submitQuote = async (data) => {
   });
   
   if (!response.ok) {
-    throw new Error('Error al enviar el correo (PHP)');
+    throw new Error('Error al conectar con el servidor de correo');
   }
   return response.json();
 };

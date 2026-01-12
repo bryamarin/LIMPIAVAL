@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-// RUTA CORREGIDA: Apuntamos a la carpeta /data
-import { services as mockServices } from "./data/services.js";
+import { servicesData } from "./api.js";
 
 const Services = () => {
-  // En una aplicación real, aquí llamarías a la API
-  // const [services, setServices] = useState([]);
-  // useEffect(() => {
-  //   api.getServices().then(setServices);
-  // }, []);
-  const services = mockServices; // Usamos los datos de ejemplo
+  const services = servicesData;
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -50,22 +44,37 @@ const Services = () => {
                 alt={service.name}
                 className="w-full h-60 object-cover rounded-2xl mb-6"
                 loading="lazy"
+                onError={(e) => {
+                    // Si falla, mostramos un color de fondo para que no se vea roto
+                    e.target.style.display = 'none';
+                    e.target.parentNode.style.backgroundColor = '#ccc';
+                }}
               />
-              <div className="flex justify-between items-center px-8 mb-2">
-                <h3 className="text-xl font-bold text-text">{service.name}</h3>
-                <div className="flex items-center bg-accent/20 text-accent-dark font-bold text-sm px-3 py-1 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 mr-1 text-accent"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span>{service.rating}</span>
+              <div className="px-8 pt-8 pb-14 text-left">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold text-text">{service.name}</h3>
+                  <div className="flex items-center bg-sky/10 text-sky font-bold text-sm px-3 py-1 rounded-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 mr-1"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    {service.rating}
+                  </div>
                 </div>
+              <p className="text-text-muted mb-8 leading-relaxed">
+                  {service.description}
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-block text-primary font-bold hover:text-sky transition-colors"
+                >
+                  Solicitar presupuesto &rarr;
+                </a>
               </div>
-              <p className="text-text-muted">{service.description}</p>
             </motion.div>
           ))}
         </div>

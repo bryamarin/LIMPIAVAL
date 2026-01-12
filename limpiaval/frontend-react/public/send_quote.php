@@ -35,7 +35,7 @@ if ($data) {
     $message .= "----------------------------------\n";
 
     // 4. Cabeceras del correo
-    $headers = "From: noreply@tudominio.com" . "\r\n" .
+    $headers = "From: ventas@limpiavlc.com" . "\r\n" .
                "Reply-To: " . $email . "\r\n" .
                "X-Mailer: PHP/" . phpversion();
 

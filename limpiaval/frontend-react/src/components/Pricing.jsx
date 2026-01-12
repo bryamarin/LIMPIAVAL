@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { getPlans } from "./lib/api.js";
+import { plansData } from "./api.js";
 
 const Pricing = ({ onPlanSelect }) => {
-  const [plans, setPlans] = useState([]);
-
-  useEffect(() => {
-    // Obtenemos los planes desde la API local
-    getPlans().then(data => setPlans(data));
-  }, []);
+  
+  const plans = plansData; 
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -37,8 +33,10 @@ const Pricing = ({ onPlanSelect }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:px-24">
           {plans.map((plan, index) => {
-            // Aseguramos que features sea un array, por si acaso
-            const featuresList = Array.isArray(plan.features) ? plan.features : [];
+            const featuresList =
+              typeof plan.features === "string"
+                ? JSON.parse(plan.features)
+                : plan.features;
 
             return (
               <motion.div
@@ -105,7 +103,7 @@ const Pricing = ({ onPlanSelect }) => {
                   ))}
                 </ul>
                 <button
-                  onClick={() => onPlanSelect(plan.name)} 
+                  onClick={() => onPlanSelect && onPlanSelect(plan.name)}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-300 ${
                     plan.featured
                       ? "bg-white text-primary hover:bg-sky hover:text-white"

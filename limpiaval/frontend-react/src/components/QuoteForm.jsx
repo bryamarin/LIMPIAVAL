@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './QuoteForm.module.css';
-import { submitQuote } from './lib/api.js'; 
+import { submitQuote } from "./api.js";
 
 const QuoteForm = ({ serviceName, isOpen, onClose }) => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
@@ -15,7 +15,6 @@ const QuoteForm = ({ serviceName, isOpen, onClose }) => {
     e.preventDefault();
     setStatus('sending');
     try {
-      // Enviamos los datos del formulario junto con el nombre del servicio
       await submitQuote({ ...formData, serviceName });
       setStatus('success');
       setTimeout(() => {
@@ -40,7 +39,7 @@ const QuoteForm = ({ serviceName, isOpen, onClose }) => {
             <p>Hemos recibido tu solicitud. Nos pondremos en contacto contigo a la brevedad.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className={styles.form}>
             <h2 className="text-2xl font-bold text-text mb-2">Cotizar Servicio</h2>
             <p className="text-text-muted mb-6">Estás cotizando: <span className="font-bold text-primary">{serviceName}</span></p>
 

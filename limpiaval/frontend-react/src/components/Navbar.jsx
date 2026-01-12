@@ -39,8 +39,8 @@ const Navbar = () => {
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2">
           <img 
-            src="/assets/imagenes/logo.png" 
-            alt="LimpiaVal Logo" 
+            src="/assets/logos/logo.png"
+            alt="logolimpiaval" 
             className="h-10 w-auto" 
           />
           <span className={`text-xl font-bold ${isScrolled ? 'text-primary' : 'text-primary'}`}>

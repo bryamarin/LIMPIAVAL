@@ -71,7 +71,7 @@ Desde la carpeta raíz (limpiaval/), puedes usar los siguientes comandos:
 
 Para levantar el backend y el frontend de React simultáneamente (recomendado):
 
-npm run dev
+git a
 
 La API estará disponible en http://localhost:3000
 
